@@ -11,7 +11,6 @@ How to use:
 - select filter by specific pathogen
 - filters and displays positive pathogen lab results
 
-Preview: 
 <img width="450" alt="image" src="https://github.com/user-attachments/assets/96be0bd6-579b-4e34-bb06-17fbd8556286" />
 
 Only rows with Result as "Positive" (case-insensitive) will be shown.
