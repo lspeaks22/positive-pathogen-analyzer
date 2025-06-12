@@ -1,0 +1,24 @@
+Name,Address,Latitude,Longitude,County,Zip,Pathogen,Result,Test_Date
+Fritz Haarmann,"16179 Kyle Streets, Towson, MD",38.3777,-78.957,Anne Arundel,21171,Influenza virus,Positive,2025-06-07
+Robert Hansen,"56481 Joseph Ports, Columbia, MD",38.4629,-77.876,Montgomery,20969,Chlamydia trachomatis,Positive,2025-06-09
+Carl Eugene Watts,"53654 Ashley Crest Apt. 238, Gaithersburg, MD",38.1168,-79.206,Howard,20906,Hepatitis A virus,Positive,2025-06-05
+Dorothea Puente,"64138 Robert Circle Apt. 410, Ellicott City, MD",39.7811,-78.1258,Frederick,21286,Influenza virus,Positive,2025-07-01
+Bev Allitt,"571 William Route Suite 199, Columbia, MD",39.0885,-78.3091,Baltimore City,20939,Mycobacterium tuberculosis,Positive,2025-06-06
+Richard Trenton Chase,"32912 Frank Mountain, Towson, MD",39.2357,-77.4569,Wicomico,21455,Listeria monocytogenes,Positive,2025-06-14
+Leonarda Cianciulli,"85374 Baker Crest Apt. 249, Annapolis, MD",38.9347,-76.5856,Montgomery,20894,Staphylococcus aureus,Positive,2025-06-06
+Belle Gunness,"06788 Cody Cove Apt. 100, Salisbury, MD",39.6911,-77.2479,Howard,21267,Histoplasma capsulatum,Positive,2025-06-29
+Elizabeth Báthory,"65199 Lowery Club, Salisbury, MD",39.2956,-76.7833,Baltimore City,20856,Hepatitis B virus,Positive,2025-06-25
+Albert DeSalvo,"78593 Craig Shoals Apt. 480, Baltimore, MD",38.2564,-77.872,Howard,21261,SARS-CoV-2,Positive,2025-06-07
+Patrick Kearney,"2239 Drake Square Suite 905, Towson, MD",38.9435,-75.3255,Howard,21103,Haemophilus influenzae,Positive,2025-06-01
+Wayne Williams,"705 Lindsay Junctions, Columbia, MD",39.7853,-75.3918,Howard,21175,Hepatitis A virus,Positive,2025-06-16
+Robert Lee Yates,"26752 Walker Radial Apt. 644, Silver Spring, MD",38.6288,-75.3516,Frederick,21072,Pseudomonas aeruginosa,Positive,2025-06-09
+Joseph James DeAngelo,"0433 Michael Turnpike Apt. 006, Rockville, MD",39.3495,-77.8026,Montgomery,21709,Hepatitis C virus,Positive,2025-06-19
+Stephen Griffiths,"54115 Pamela Estates Apt. 815, Silver Spring, MD",38.8411,-79.3334,Frederick,21800,Helicobacter pylori,Positive,2025-06-28
+Anthony Sowell,"2962 Craig Ford, Gaithersburg, MD",38.0895,-75.403,Baltimore City,21201,Vibrio cholerae,Positive,2025-06-03
+Michael Ross,"884 Evans Court Apt. 698, Gaithersburg, MD",39.3849,-78.3074,Frederick,21817,Hepatitis A virus,Positive,2025-06-28
+Kendall Francois,"417 Kyle Locks, Rockville, MD",37.9682,-79.1921,Wicomico,21776,Shigella flexneri,Positive,2025-06-24
+Joachim Kroll,"33206 Vanessa Mews, Baltimore, MD",39.6079,-77.4064,Montgomery,21225,Mycobacterium tuberculosis,Positive,2025-06-15
+Sean Vincent Gillis,"148 Humphrey Greens, Towson, MD",37.9417,-75.7648,Howard,21596,Streptococcus pyogenes,Positive,2025-06-30
+Charles Ng,"745 Matthew Underpass, Columbia, MD",39.0797,-76.4501,Wicomico,21432,Hepatitis B virus,Positive,2025-06-21
+Harvey Carignan,"3678 Nicholson Passage, Silver Spring, MD",38.0713,-78.172,Wicomico,21137,Salmonella enterica,Positive,2025-06-26
+Doug Clark,"8628 Glenn Wells, Rockville, MD",39.5653,-77.8536,Frederick,21223,Ebola virus,Positive,2025-06-09
