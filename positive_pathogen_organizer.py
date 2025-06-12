@@ -6,27 +6,73 @@ class PathogenDetectorApp:
     def __init__(self, master):
         self.master = master
         self.master.title("Positive Pathogen Detector")
-        self.master.geometry("900x600")
-        self.master.configure(bg="#d0ecf2")  # Light blue background
+        self.master.geometry("960x640")
+        self.master.configure(bg="#d0ecf2")  #background
 
-       
-        tk.Label(master, text="🧬 Pathogen Lab Result Viewer", font=("Courier", 22), bg="#d0ecf2").pack(pady=10)
+        #Header
+        header = tk.Label(
+            master,
+            text="Pathogen Lab Result Viewer",
+            font=("Courier", 24, "bold"),
+            bg="#d0ecf2",
+            fg="#003f5c",
+            pady=20
+        )
+        header.pack()
 
-      
-        tk.Button(master, text="Upload CSV File", command=self.upload_csv).pack(pady=5)
+        #Upload Button
+        tk.Button(
+            master,
+            text="Upload CSV File",
+            font=("Courier", 12),
+            bg="#a7d7c5",
+            fg="black",
+            relief="raised",
+            bd=2,
+            command=self.upload_csv
+        ).pack(pady=8)
 
+        #Pathogen dropdown
         self.pathogen_var = tk.StringVar()
-        self.pathogen_dropdown = ttk.Combobox(master, textvariable=self.pathogen_var, state="readonly", width=50)
+        self.pathogen_dropdown = ttk.Combobox(
+            master,
+            textvariable=self.pathogen_var,
+            state="readonly",
+            width=60,
+            font=("Courier", 11)
+        )
         self.pathogen_dropdown.pack(pady=10)
 
-        tk.Button(master, text="Filter by Pathogen", command=self.filter_data).pack()
+        #Filter Button
+        tk.Button(
+            master,
+            text= "Filter by Pathogen",
+            font=("Courier", 12),
+            bg="#f2b5d4",
+            fg="black",
+            relief="raised",
+            bd=2,
+            command=self.filter_data
+        ).pack(pady=6)
 
+        #Table setup
         self.table = ttk.Treeview(master, show="headings")
-        self.table.pack(expand=True, fill="both", pady=10)
+        self.table.pack(expand=True, fill="both", pady=12, padx=10)
 
+        #scrollbar
         scrollbar = ttk.Scrollbar(master, orient="vertical", command=self.table.yview)
         self.table.configure(yscroll=scrollbar.set)
         scrollbar.pack(side="right", fill="y")
+
+        #Footer
+        footer = tk.Label(
+            master,
+            font=("Courier", 10, "italic"),
+            bg="#d0ecf2",
+            fg="#5e5e5e",
+            pady=10
+        )
+        footer.pack(side="bottom")
 
         self.df = None
 
@@ -42,10 +88,10 @@ class PathogenDetectorApp:
                 raise ValueError("CSV must contain 'Result' and 'Pathogen' columns.")
 
             self.df = self.df[self.df["Result"].str.upper() == "POSITIVE"]
-            unique_pathogens = sorted(self.df["Pathogen"].unique())
+            unique_pathogens = sorted(self.df["Pathogen"].dropna().unique())
 
             if not unique_pathogens:
-                messagebox.showinfo("No Positives", "No positive results found in the file.")
+                messagebox.showinfo("No Positives", "No positive results found.")
                 return
 
             self.pathogen_dropdown["values"] = unique_pathogens
@@ -53,11 +99,11 @@ class PathogenDetectorApp:
             self.display_data(self.df)
 
         except Exception as e:
-            messagebox.showerror("Error", str(e))
+            messagebox.showerror("Error.", str(e))
 
     def filter_data(self):
         if self.df is None:
-            messagebox.showwarning("No Data", "Please upload a CSV file first.")
+            messagebox.showwarning("No Data", "Upload a CSV file first.")
             return
 
         selected_pathogen = self.pathogen_var.get()
@@ -69,10 +115,9 @@ class PathogenDetectorApp:
         self.table["columns"] = list(dataframe.columns)
         for col in dataframe.columns:
             self.table.heading(col, text=col)
-            self.table.column(col, anchor="w", width=150)
+            self.table.column(col, anchor="center", width=150)
         for _, row in dataframe.iterrows():
             self.table.insert("", "end", values=list(row))
-
 
 if __name__ == "__main__":
     root = tk.Tk()
