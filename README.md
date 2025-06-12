@@ -18,5 +18,6 @@ Only rows with Result as "Positive" (case-insensitive) will be shown.
 How to run: 
 Install Python 3 (if not already installed)
 Install other tools (under what you will need/built with:) 
+\n
 run the application
 
